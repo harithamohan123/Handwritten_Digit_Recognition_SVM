@@ -5,12 +5,13 @@ Handwritten digit recognition is the process to provide the ability to machines 
 
 Procedure :                                                                                                                    
         => Analyse the problem that is need to be found.                                                                         
-        => Collect dataset using Scikit-learn Digit Dataset that has 10 classes with total number of samples as 1797. Single image of dimension 64 as 8 x 8 matrices.                                                    
-        => Load dataset and summarize detials such as number of rows and columns.                                                                    
-        => Using iloc segregate the independant and dependant values. (iloc - helps to select values belonging to particular row and column)         
+        => Collect dataset using Scikit-learn Digit Dataset that has 10 classes with total number of samples as 1797. Single image of dimension 64 as 8 x 8 matrices. Our dataset is not an image but values of image. We define them as pixel values.                                                    
+        => Load dataset and summarize detials such as Data = (1797, 64), Image = (1797, 8, 8), Target = [0 1 2....8 9].                                           
+        => Visualise Data , it is array format containing values from 0-16 in 8x8 matrix with a diension of 64.
+        => Segregate Dataset into x and y, where x = input pixels -> dataset.images.reshape(imagedataLength, -1) where -1 is excluding final array/part and y = output class -> dataset.target where target is output.
         => Split train and test set for validation.                                                                                               
-        => We do feature scaling to scale our data to make all features contribute equally to result.                                          
-        => Use Logistic regression algorithm.                                                                                          
-        => Training model for preprocessing dataset.                                                                            
-        => Confusion matix used for validation that gives accuracy with true postive, true negative, false positive, false negative values.                
+        => Use Support Vector Machine with the types of kernel -> linear Kernel, RBF Kernel, Polynomial Kernel. 
+        => Change the tunning parameters C , Degree(only for polynomial kernel), Gamma to determine good accuracy. Choose good C and gamma. 
+        => Train the model.                                                                            
+        =>  Evaluation and Validation.                
         => Observe how our model classify our new data.     
